@@ -1,0 +1,67 @@
+name: 'Build'
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout - Master Branch
+        uses: actions/checkout@v6
+        with:
+          ref: master
+          fetch-depth: 0
+
+      - name: Count Commits
+        id: counter
+        run: echo "commits=$(git rev-list --count master)" >> "${GITHUB_OUTPUT}"
+
+      - name: Compile - Expanded
+        uses: gha-utilities/sass-build@v0.6.1
+        with:
+          source: peach.scss
+          destination: /tmp/peach.css
+          outputStyle: expanded
+          indentType: tab
+          omitSourceMapUrl: true
+
+      - name: Compile - Minimal
+        uses: gha-utilities/sass-build@v0.6.0
+        with:
+          source: peach.scss
+          destination: /tmp/peach.min.css
+          outputStyle: compressed
+          omitSourceMapUrl: true
+
+      - name: Checkout - Build Branch
+        uses: actions/checkout@v6
+        with:
+          ref: build
+          fetch-depth: 1
+
+      - name: Move Compiled Files
+        run: mv /tmp/peach.css /tmp/peach.min.css .
+
+      - name: Add Stylus Metadata
+        run: |
+          mkdir -p stylus
+          cat stylus.txt peach.css > stylus/peach.user.css
+          cat stylus.txt peach.min.css > stylus/peach.min.user.css
+          sed -i 's/$version/0.1.${{ steps.counter.outputs.commits }}/' stylus/*.css
+
+      - name: Commit Changes
+        run: |
+          git config --local user.email 'action@github.com'
+          git config --local user.name 'GitHub Action'
+          git commit --all --message 'Build files for ${{ github.sha }}'
+
+      - name: Push Changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: build

@@ -11,4 +11,4 @@ debug:
 	sass peach.scss peach.css --no-source-map --style expanded --verbose
 
 clean:
-	rm ${name}.css ${name}.css.map
+	rm -f ${name}.css ${name}.css.map

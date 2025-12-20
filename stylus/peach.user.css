@@ -3,11 +3,13 @@
 @description  Pastel colored theme for SearXNG based around the color of a peach
 @namespace    https://github.com/Elvyria/searxng-peach
 @author       Elvyria
-@version      0.1.7
+@version      0.1.8
 @preprocessor default
 ==/UserStyle== */
 :root {
   view-transition-name: root;
+  --color-autocomplete-font: #21242A;
+  --color-autocomplete-background-hover: #FFEFEF;
   --color-header-background: var(--color-base-background);
   --color-base-font: #8D9097;
   --color-sidebar-font: #8D9097;
@@ -245,6 +247,7 @@ div.selectable_url {
   background-position: center;
   background-repeat: no-repeat;
   background-image: var(--logo);
+  animation: 2s bounce cubic-bezier(0.28, 0.84, 0.42, 1);
 }
 #main_index .title h1 {
   display: none !important;
@@ -449,8 +452,22 @@ div.selectable_url {
   padding-left: 2rem;
 }
 
+.index #search_header .search_box {
+  animation: 400ms searchbar-appear cubic-bezier(0, 0.55, 0.45, 1);
+}
+
 #search_header:has(#send_search:hover) #search_logo {
   animation: 2s bounce cubic-bezier(0.28, 0.84, 0.42, 1);
+}
+#search_header .autocomplete {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+#search_header .autocomplete ul {
+  padding: 1rem;
+}
+#search_header .autocomplete ul > li {
+  padding: 0.6rem 1rem;
+  border-radius: 1rem;
 }
 
 .search_filters {
@@ -649,5 +666,18 @@ div.selectable_url {
   }
   100% {
     transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes searchbar-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(10vh);
+  }
+  60% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

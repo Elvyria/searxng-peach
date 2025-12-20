@@ -3,7 +3,7 @@
 @description  Pastel colored theme for SearXNG based around the color of a peach
 @namespace    https://github.com/Elvyria/searxng-peach
 @author       Elvyria
-@version      0.1.4
+@version      0.1.6
 @preprocessor default
 ==/UserStyle== */
 :root {
@@ -130,6 +130,10 @@ div.selectable_url {
   color: white;
   border-radius: 0 1.4rem 1.4rem 0;
   background-color: #FF9EBB;
+  transition: background-color 200ms ease-out;
+}
+#send_search:hover {
+  background-color: #FDACAC;
 }
 
 #engines_msg .response-error {

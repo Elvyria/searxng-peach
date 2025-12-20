@@ -15,6 +15,12 @@ Pastel colored theme for [SearXNG](https://github.com/searxng/searxng) based aro
 * [League Spartan](https://fonts.google.com/specimen/League+Spartan)
 * [Comfortaa](https://fonts.google.com/specimen/Comfortaa?query=Comfortaa)
 
+## Installation
+
+Browser ready files are available under the [build](https://github.com/Elvyria/searxng-peach/tree/build) branch in both regular and minimized formats.
+
+* Vanilla Flavoured : [Regular](https://github.com/Elvyria/searxng-peach/blob/build/peach.css)・[Minimized](https://github.com/Elvyria/searxng-peach/blob/build/peach.min.css)
+* [Stylus](https://github.com/openstyles/stylus) Ready : [Regular](https://github.com/Elvyria/searxng-peach/raw/refs/heads/build/stylus/peach.user.css)・[Minimized](https://github.com/Elvyria/searxng-peach/raw/refs/heads/build/stylus/peach.min.user.css)
 ## Contributing
 Fixes for different screen resolutions and inconsistencies between elements are warmly welcomed.
 

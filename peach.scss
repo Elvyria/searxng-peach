@@ -5,6 +5,7 @@ $blue:  #3387D3;
 $red:   #E88C8C;
 $pink:  #FF9EBB;
 $green: #89d66d;
+$peach: #FDACAC;
 
 :root {
 	view-transition-name: root;
@@ -145,6 +146,11 @@ div.selectable_url {
 	color: white;
 	border-radius: 0 1.4rem 1.4rem 0;
 	background-color: $pink;
+	transition: background-color 200ms ease-out;
+
+	&:hover {
+		background-color: $peach;
+	}
 }
 
 #engines_msg {

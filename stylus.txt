@@ -1,0 +1,8 @@
+/* ==UserStyle==
+@name         SearXNG - Peach
+@description  Pastel colored theme for SearXNG based around the color of a peach
+@namespace    https://github.com/Elvyria/searxng-peach
+@author       Elvyria
+@version      $version
+@preprocessor default
+==/UserStyle== */

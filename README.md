@@ -1,6 +1,13 @@
-# SearXNG x Peach
+<div align="center">
+  <img width="64p" height="64" src="./peach.svg"/ alt="peach">
+  <br>SearXNG x Peach
+</div>
+
+---
 
 Pastel colored theme for [SearXNG](https://github.com/searxng/searxng) based around the color of a peach.
+
+<img width="760" height="580" alt="screenshot preview" src="https://github.com/user-attachments/assets/89d97af1-451a-418d-a065-2de81056849a" />
 
 ## Optional Dependencies
 #### Font Families - Recommended

@@ -21,9 +21,6 @@ jobs:
         id: counter
         run: echo "commits=$(git rev-list --count master)" >> "${GITHUB_OUTPUT}"
 
-      - name: Make - Inline
-        run: make inline
-
       - name: Compile - Expanded
         uses: gha-utilities/sass-build@v0.6.1
         with:
@@ -40,6 +37,11 @@ jobs:
           destination: /tmp/peach.min.css
           outputStyle: compressed
           omitSourceMapUrl: true
+
+      - name: Inline Assets
+        run: |
+          make inline FILE=/tmp/peach.css
+          make inline FILE=/tmp/peach.min.css
 
       - name: Checkout - Build Branch
         uses: actions/checkout@v6

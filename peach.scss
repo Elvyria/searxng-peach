@@ -1,4 +1,3 @@
-// #95E6FF
 $black: #21242A;
 $gray:  #8D9097;
 $blue:  #3387D3;
@@ -69,10 +68,6 @@ button {
 
 	&.category_button {
 		border:none !important;
-
-		&::hover {
-			text-shadow: 0 0 10px $pink, 0 0 20px $pink, 0 0 30px $pink;
-		}
 
 		&::after {
 			content: "";
@@ -289,9 +284,6 @@ div.selectable_url {
 	}
 }
 
-// img[src="/static/themes/simple/img/img_load_error.svg"] {
-// }
-
 #main_index {
 	.title {
 		background: none;
@@ -476,12 +468,6 @@ div.selectable_url {
 	}
 
 	.url_header {
-		// display: inline-block;
-		// display: none;
-		// background-color: #dfe3eb;
-		// border-radius: 1rem;
-		// padding: 0.4em 0.9em;
-
 		width: fit-content;
 
 		.url_o1 {

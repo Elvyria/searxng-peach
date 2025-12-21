@@ -21,10 +21,13 @@ jobs:
         id: counter
         run: echo "commits=$(git rev-list --count master)" >> "${GITHUB_OUTPUT}"
 
+      - name: Make - Inline
+        run: make inline
+
       - name: Compile - Expanded
         uses: gha-utilities/sass-build@v0.6.1
         with:
-          source: peach.scss
+          source: peach.bundle.scss
           destination: /tmp/peach.css
           outputStyle: expanded
           indentType: tab
@@ -33,7 +36,7 @@ jobs:
       - name: Compile - Minimal
         uses: gha-utilities/sass-build@v0.6.0
         with:
-          source: peach.scss
+          source: peach.bundle.scss
           destination: /tmp/peach.min.css
           outputStyle: compressed
           omitSourceMapUrl: true

@@ -22,6 +22,16 @@ Browser ready files are available under the [build](https://github.com/Elvyria/s
 * Vanilla Flavoured : [Regular](https://github.com/Elvyria/searxng-peach/blob/build/peach.css)・[Minimized](https://github.com/Elvyria/searxng-peach/blob/build/peach.min.css)
 * [Stylus](https://github.com/openstyles/stylus) Ready : [Regular](https://github.com/Elvyria/searxng-peach/raw/refs/heads/build/stylus/peach.user.css)・[Minimized](https://github.com/Elvyria/searxng-peach/raw/refs/heads/build/stylus/peach.min.user.css)  
 . <sub>Make sure to specify applicable SearXNG domains after the installation</sub> .
+## Roadmap
+  * [ ] Animation for autocomplete menu
+  * [ ] Animation for image detail popup
+  * [ ] Fallback fonts・Inlined fonts (LICENSE Issue)
+  * [ ] Fix hover transition・color for page arrow buttons
+  * [ ] Fix video thumbnail・timestamp alignment
+  * [ ] Improve settings menu
+  * [ ] Separate files by categories
+  * [ ] Unified design for file entries in Files category
+
 ## Contributing
 Fixes for different screen resolutions and inconsistencies between elements are warmly welcomed.
 

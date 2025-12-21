@@ -3,7 +3,7 @@
 @description  Pastel colored theme for SearXNG based around the color of a peach
 @namespace    https://github.com/Elvyria/searxng-peach
 @author       Elvyria
-@version      0.1.9
+@version      0.1.12
 @preprocessor default
 ==/UserStyle== */
 :root {
@@ -64,9 +64,6 @@ button {
 }
 button.category_button {
   border: none !important;
-}
-button.category_button::hover {
-  text-shadow: 0 0 10px #FF9EBB, 0 0 20px #FF9EBB, 0 0 30px #FF9EBB;
 }
 button.category_button::after {
   content: "";

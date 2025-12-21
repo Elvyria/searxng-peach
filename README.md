@@ -11,7 +11,7 @@ Pastel colored theme for [SearXNG](https://github.com/searxng/searxng) based aro
 
 ## Optional Dependencies
 #### Font Families - Recommended
-* IPAex Gothic
+* [IPAex Gothic](https://moji.or.jp/ipafont)
 * [League Spartan](https://fonts.google.com/specimen/League+Spartan)
 * [Comfortaa](https://fonts.google.com/specimen/Comfortaa)
 

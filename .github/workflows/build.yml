@@ -24,7 +24,7 @@ jobs:
       - name: Compile - Expanded
         uses: gha-utilities/sass-build@v0.6.1
         with:
-          source: peach.bundle.scss
+          source: peach.scss
           destination: /tmp/peach.css
           outputStyle: expanded
           indentType: tab
@@ -33,7 +33,7 @@ jobs:
       - name: Compile - Minimal
         uses: gha-utilities/sass-build@v0.6.0
         with:
-          source: peach.bundle.scss
+          source: peach.scss
           destination: /tmp/peach.min.css
           outputStyle: compressed
           omitSourceMapUrl: true

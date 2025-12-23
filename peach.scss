@@ -547,6 +547,9 @@ div.selectable_url {
 	.autocomplete {
 		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 
+		opacity: 0;
+		transition: opacity 250ms ease-out;
+
 		ul {
 			padding: 1rem;
 
@@ -564,6 +567,16 @@ div.selectable_url {
 
 .search_box {
 	border-radius: 100px;
+
+	&:has(#q:focus) .autocomplete.open {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&:has(#q:not(:focus)) .autocomplete.open {
+		opacity: 0;
+		visibility: visible;
+	}
 }
 
 #search_logo {

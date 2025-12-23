@@ -23,7 +23,7 @@ Browser ready files are available under the [build](https://github.com/Elvyria/s
 * [Stylus](https://github.com/openstyles/stylus) Ready : [Regular](https://github.com/Elvyria/searxng-peach/raw/refs/heads/build/stylus/peach.user.css)・[Minimized](https://github.com/Elvyria/searxng-peach/raw/refs/heads/build/stylus/peach.min.user.css)  
 . <sub>Make sure to specify applicable SearXNG domains after the installation</sub> .
 ## Roadmap
-  * [ ] Animation for autocomplete menu
+  * [x] Animation for autocomplete menu
   * [ ] Animation for image detail popup
   * [ ] Fallback fonts・Inlined fonts (LICENSE Issue)
   * [ ] Fix hover transition・color for page arrow buttons

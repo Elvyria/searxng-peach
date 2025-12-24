@@ -450,6 +450,8 @@ div.selectable_url {
 }
 #search_header .autocomplete {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 250ms ease-out;
 }
 #search_header .autocomplete ul {
   padding: 1rem;
@@ -465,6 +467,14 @@ div.selectable_url {
 
 .search_box {
   border-radius: 100px;
+}
+.search_box:has(#q:focus) .autocomplete.open {
+  opacity: 1;
+  visibility: visible;
+}
+.search_box:has(#q:not(:focus)) .autocomplete.open {
+  opacity: 0;
+  visibility: visible;
 }
 
 #search_logo {
@@ -520,6 +530,7 @@ div.selectable_url {
   color: var(--color-result-link-font);
   font-size: 1.6em;
   font-weight: 500;
+  user-select: none;
 }
 #sidebar .infobox .urls {
   margin-top: 2rem;

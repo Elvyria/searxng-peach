@@ -40,7 +40,7 @@ $peach-faded: #FFEFEF;
 }
 
 html {
-	font-family: "IPAexGothic";
+	font-family: "IPAexGothic", "Adwaita Sans", sans-serif;
 }
 
 main {
@@ -92,7 +92,7 @@ button {
 		color: #727789;
 		font-size: 1em;
 		font-weight: 600;
-		font-family: "SF Pro Text";
+		font-family: "SF Pro Text", "FreeSans", sans;
 		padding-bottom: 15px;
 		margin-right: 1.8rem;
 
@@ -470,21 +470,18 @@ div.selectable_url {
 	.url_header {
 		width: fit-content;
 
+        font-family: "League Spartan", "Ubuntu", sans-serif;
+		font-weight: 200;
+
 		.url_o1 {
 			color: $gray;
-			font-family: "League Spartan";
-			font-size: 1.3em;
+			font-size: 1.15em;
+			font-size-adjust: ex-height 0.42;
 		}
 
 		.url_o2 {
 			display: none
 		}
-	}
-
-	.url_wrapper {
-		font-size: 0.9rem;
-		font-weight: 200;
-		font-family: "Comfortaa";
 	}
 
 	.content, .stat {

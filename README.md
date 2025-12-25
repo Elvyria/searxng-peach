@@ -25,7 +25,7 @@ Browser ready files are available under the [build](https://github.com/Elvyria/s
 ## Roadmap
   * [x] Animation for autocomplete menu
   * [ ] Animation for image detail popup
-  * [ ] Fallback fonts・Inlined fonts (LICENSE Issue)
+  * [x] Fallback fonts・Inlined fonts (LICENSE Issue)
   * [ ] Fix hover transition・color for page arrow buttons
   * [ ] Fix video thumbnail・timestamp alignment
   * [ ] Improve settings menu

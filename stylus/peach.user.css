@@ -3,7 +3,7 @@
 @description  Pastel colored theme for SearXNG based around the color of a peach
 @namespace    https://github.com/Elvyria/searxng-peach
 @author       Elvyria
-@version      0.1.17
+@version      0.1.19
 @preprocessor default
 ==/UserStyle== */
 :root {
@@ -36,7 +36,7 @@
   navigation: auto;
 }
 html {
-  font-family: "IPAexGothic";
+  font-family: "IPAexGothic", "Adwaita Sans", sans-serif;
 }
 
 main {
@@ -83,7 +83,7 @@ button.category_checkbox, button.category_button {
   color: #727789;
   font-size: 1em;
   font-weight: 600;
-  font-family: "SF Pro Text";
+  font-family: "SF Pro Text", "FreeSans", sans;
   padding-bottom: 15px;
   margin-right: 1.8rem;
 }
@@ -398,19 +398,16 @@ div.selectable_url {
 }
 .result .url_header {
   width: fit-content;
+  font-family: "League Spartan", "Ubuntu", sans-serif;
+  font-weight: 200;
 }
 .result .url_header .url_o1 {
   color: #8D9097;
-  font-family: "League Spartan";
-  font-size: 1.3em;
+  font-size: 1.15em;
+  font-size-adjust: ex-height 0.42;
 }
 .result .url_header .url_o2 {
   display: none;
-}
-.result .url_wrapper {
-  font-size: 0.9rem;
-  font-weight: 200;
-  font-family: "Comfortaa";
 }
 .result .content, .result .stat {
   font-size: 1em;
@@ -482,7 +479,15 @@ div.selectable_url {
 }
 .search_box:has(#q:not(:focus)) .autocomplete.open {
   opacity: 0;
-  visibility: visible;
+  animation: 300ms hide-autocomplete forwards;
+}
+@keyframes hide-autocomplete {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+  }
 }
 
 #search_logo {

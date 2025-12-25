@@ -575,7 +575,12 @@ div.selectable_url {
 
 	&:has(#q:not(:focus)) .autocomplete.open {
 		opacity: 0;
-		visibility: visible;
+		animation: 300ms hide-autocomplete forwards;
+
+		@keyframes hide-autocomplete {
+			from { visibility: visible; }
+			to   { visibility: hidden;  }
+		}
 	}
 }
 

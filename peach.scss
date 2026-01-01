@@ -644,6 +644,7 @@ div.selectable_url {
 
 		.urls {
 			margin-top: 2rem;
+            user-select: none;
 		}
 	}
 }

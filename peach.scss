@@ -639,7 +639,6 @@ div.selectable_url {
 			color: var(--color-result-link-font);
 			font-size: 1.6em;
 			font-weight: 500;
-			user-select: none;
 		}
 
 		.urls {
@@ -676,6 +675,7 @@ div.selectable_url {
 
 	summary {
 		margin-bottom: 1rem !important;
+		user-select: none;
 	}
 
 	&[open] {

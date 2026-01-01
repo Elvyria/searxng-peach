@@ -430,6 +430,7 @@ div.selectable_url {
   background-color: #f2f4f8;
   padding: 0.2rem 0.6rem;
   border-radius: 1rem;
+  user-select: none;
 }
 
 #q {
@@ -535,10 +536,10 @@ div.selectable_url {
   color: var(--color-result-link-font);
   font-size: 1.6em;
   font-weight: 500;
-  user-select: none;
 }
 #sidebar .infobox .urls {
   margin-top: 2rem;
+  user-select: none;
 }
 
 #pagination {
@@ -565,6 +566,7 @@ div.selectable_url {
 }
 .sidebar-collapsible summary {
   margin-bottom: 1rem !important;
+  user-select: none;
 }
 .sidebar-collapsible[open] > :last-child {
   animation: 1s wipe ease-out;

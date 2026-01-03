@@ -561,6 +561,10 @@ div.selectable_url {
 
 .search_filters {
 	margin: 1.6rem 0 0 10.6rem;
+
+	select {
+		transition: 300ms color ease-out;
+	}
 }
 
 .search_box {

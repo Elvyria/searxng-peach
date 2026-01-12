@@ -462,6 +462,9 @@ div.selectable_url {
 .search_filters {
   margin: 1.6rem 0 0 10.6rem;
 }
+.search_filters select {
+  transition: 300ms color ease-out;
+}
 
 .search_box {
   border-radius: 100px;
@@ -503,9 +506,15 @@ div.selectable_url {
 #sidebar #result_count {
   display: none;
 }
-#sidebar #suggestions input[type=submit] {
+#sidebar #suggestions ul {
+  list-style: none;
+}
+#sidebar #suggestions ul li {
+  padding: 0.3rem 0 0.5rem 1rem;
+}
+#sidebar #suggestions ul li input[type=submit] {
   font-size: 1.1em;
-  padding: 0.1rem 0.6rem;
+  padding: 0;
 }
 #sidebar #search_url div.selectable_url pre {
   float: unset;
